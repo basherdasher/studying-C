@@ -3,17 +3,8 @@
 и Цельсию для fahr = 0,20, ..., 300 */
 main()
 {
-	int fahr, celsius;
-	int lower, upper, step;
-
-	lower = 0; // нижгяя граница температур
-	upper = 300; // верхняя граница
-	step = 20; //шаг
-
-	fahr = lower;
-	while (fahr <= upper) {
-		celsius =  5 * (fahr - 32)/9;
-		printf("%d\t%d\n", fahr, celsius);
-		fahr = fahr + step;
-	}
+	int fahr;
+	printf("таблица температур по Фаренгейту и Цельсию от 300 до 0\n");
+	for (fahr = 300; fahr >= 0; fahr = fahr - 20)
+		printf("%3d %6.1f\n", fahr, (5.0/9.0)*(fahr - 32));
 }
